@@ -1135,7 +1135,7 @@ section {
   left: 0;
   bottom: 0;
   right: 0;
-  height: 40px;
+  height: 100%;
   opacity: 0;
   transition: ease-in-out 0.3s;
   text-align: center;
@@ -1144,11 +1144,17 @@ section {
   align-items: center;
   justify-content: center;
 }
-.team .member .social a {
-  transition: color 0.3s;
-  color: #124265;
-  margin: 0 10px;
-  display: inline-block;
+.team .member .social p::after {
+  content: "";
+  width: 0;
+  height: 0;
+  text-align: justify;
+  border-top: 20px solid #f3f9fd;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  position: absolute;
+  bottom: -20px;
+  left: calc(50% - 20px);
 }
 .team .member .social a:hover {
   color: #2487ce;
